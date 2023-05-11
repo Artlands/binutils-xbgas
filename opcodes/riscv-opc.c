@@ -955,7 +955,7 @@ const struct riscv_opcode riscv_opcodes[] =
 {"esb",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESB,  MASK_ESB,  match_opcode, 0 },
 
 {"esq",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESQ,  MASK_ESQ,  match_opcode, 0 },
-{"ese",       64, INSN_CLASS_XBGAS, "g,q(s)",  MATCH_ESE,  MASK_ESE,  match_opcode, 0 }
+{"ese",       64, INSN_CLASS_XBGAS, "g,q(s)",  MATCH_ESE,  MASK_ESE,  match_opcode, 0 },
 
 {"erld",      64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLD, MASK_ERLD, match_opcode, 0 }, 
 {"erlw",      64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLW, MASK_ERLW, match_opcode, 0 }, 
