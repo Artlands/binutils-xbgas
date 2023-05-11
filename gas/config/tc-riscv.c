@@ -1343,16 +1343,19 @@ validate_riscv_insn (const struct riscv_opcode *opc, int length)
 	case 'c': break; /* Macro operand, must be symbol or constant.  */
 	case 'I': break; /* Macro operand, must be constant.  */
 	case 'D': /* RD, floating point.  */
+  case 'e': /* EXTD/EXT3, xBGAS extended register. */
 	case 'd': USE_BITS (OP_MASK_RD, OP_SH_RD); break;
 	case 'y': USE_BITS (OP_MASK_BS,	OP_SH_BS); break;
 	case 'Y': USE_BITS (OP_MASK_RNUM, OP_SH_RNUM); break;
 	case 'Z': /* RS1, CSR number.  */
 	case 'S': /* RS1, floating point.  */
+  case 'g': /* EXT1, xBGAS extended register. */
 	case 's': USE_BITS (OP_MASK_RS1, OP_SH_RS1); break;
 	case 'U': /* RS1 and RS2 are the same, floating point.  */
 	  USE_BITS (OP_MASK_RS1, OP_SH_RS1);
 	  /* Fall through.  */
 	case 'T': /* RS2, floating point.  */
+  case 'g': /* EXT2, xBGAS extended register. */
 	case 't': USE_BITS (OP_MASK_RS2, OP_SH_RS2); break;
 	case 'R': /* RS3, floating point.  */
 	case 'r': USE_BITS (OP_MASK_RS3, OP_SH_RS3); break;
