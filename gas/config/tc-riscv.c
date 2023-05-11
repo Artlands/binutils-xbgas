@@ -1349,7 +1349,7 @@ validate_riscv_insn (const struct riscv_opcode *opc, int length)
 	case 'Y': USE_BITS (OP_MASK_RNUM, OP_SH_RNUM); break;
 	case 'Z': /* RS1, CSR number.  */
 	case 'S': /* RS1, floating point.  */
-  case 'g': /* EXT1, xBGAS extended register. */
+  case 'f': /* EXT1, xBGAS extended register. */
 	case 's': USE_BITS (OP_MASK_RS1, OP_SH_RS1); break;
 	case 'U': /* RS1 and RS2 are the same, floating point.  */
 	  USE_BITS (OP_MASK_RS1, OP_SH_RS1);

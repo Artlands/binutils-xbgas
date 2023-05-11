@@ -955,7 +955,7 @@ const struct riscv_opcode riscv_opcodes[] =
 {"esb",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESB,  MASK_ESB,  match_opcode, 0 },
 
 {"esq",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESQ,  MASK_ESQ,  match_opcode, 0 },
-{"ese",       64, INSN_CLASS_XBGAS, "g,q(s)",  MATCH_ESE,  MASK_ESE,  match_opcode, 0 },
+{"ese",       64, INSN_CLASS_XBGAS, "f,q(t)",  MATCH_ESE,  MASK_ESE,  match_opcode, 0 },
 
 {"erld",      64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLD, MASK_ERLD, match_opcode, 0 }, 
 {"erlw",      64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLW, MASK_ERLW, match_opcode, 0 }, 
@@ -969,11 +969,11 @@ const struct riscv_opcode riscv_opcodes[] =
 {"ersw",      64, INSN_CLASS_XBGAS, "s,t,e",   MATCH_ERSW, MASK_ERSW, match_opcode, 0 }, 
 {"ersh",      64, INSN_CLASS_XBGAS, "s,t,e",   MATCH_ERSH, MASK_ERSH, match_opcode, 0 }, 
 {"ersb",      64, INSN_CLASS_XBGAS, "s,t,e",   MATCH_ERSB, MASK_ERSB, match_opcode, 0 }, 
-{"erse",      64, INSN_CLASS_XBGAS, "g,t,e",   MATCH_ERSE, MASK_ERSE, match_opcode, 0 },
+{"erse",      64, INSN_CLASS_XBGAS, "f,t,e",   MATCH_ERSE, MASK_ERSE, match_opcode, 0 },
 
-{"eaddi",     64, INSN_CLASS_XBGAS, "d,g,o",  MATCH_EADDI, MASK_EADDI, match_opcode, 0 },
+{"eaddi",     64, INSN_CLASS_XBGAS, "d,f,o",  MATCH_EADDI, MASK_EADDI, match_opcode, 0 },
 {"eaddie",    64, INSN_CLASS_XBGAS, "e,s,o",  MATCH_EADDIE,MASK_EADDIE,match_opcode, 0 },
-{"eaddix",    64, INSN_CLASS_XBGAS, "e,g,o",  MATCH_EADDIX,MASK_EADDIX,match_opcode, 0 },
+{"eaddix",    64, INSN_CLASS_XBGAS, "e,f,o",  MATCH_EADDIX,MASK_EADDIX,match_opcode, 0 },
 
 {"ebld",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBLD,  MASK_EBLD,  match_opcode, 0 }, 
 {"eblw",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBLW,  MASK_EBLW,  match_opcode, 0 }, 
