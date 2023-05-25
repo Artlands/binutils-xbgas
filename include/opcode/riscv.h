@@ -423,7 +423,6 @@ enum riscv_insn_class
   INSN_CLASS_XTHEADMEMPAIR,
   INSN_CLASS_XTHEADSYNC,
   INSN_CLASS_XVENTANACONDOPS,
-  INSN_CLASS_XBGAS,
 };
 
 /* This structure holds information for a particular instruction.  */
@@ -556,6 +555,7 @@ extern const char * const riscv_vsew[8];
 extern const char * const riscv_vlmul[8];
 extern const char * const riscv_vta[2];
 extern const char * const riscv_vma[2];
+extern const char * const riscv_xbgas_names_numeric[NGPR];
 
 extern const struct riscv_opcode riscv_opcodes[];
 extern const struct riscv_opcode riscv_insn_types[];

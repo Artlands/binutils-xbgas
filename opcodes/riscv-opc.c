@@ -937,56 +937,6 @@ const struct riscv_opcode riscv_opcodes[] =
 {"c.fswsp",   32, INSN_CLASS_F_AND_C, "CT,CM(Cc)", MATCH_C_FSWSP, MASK_C_FSWSP, match_opcode, INSN_DREF|INSN_4_BYTE },
 {"c.fsw",     32, INSN_CLASS_F_AND_C, "CD,Ck(Cs)", MATCH_C_FSW, MASK_C_FSW, match_opcode, INSN_DREF|INSN_4_BYTE },
 
-/* xBGAS instructions */
-
-{"eld",       64, INSN_CLASS_XBGAS, "d,o(s)",  MATCH_ELD,  MASK_ELD,  match_opcode, 0 },
-{"elw",       64, INSN_CLASS_XBGAS, "d,o(s)",  MATCH_ELW,  MASK_ELW,  match_opcode, 0 },
-{"elh",       64, INSN_CLASS_XBGAS, "d,o(s)",  MATCH_ELH,  MASK_ELH,  match_opcode, 0 },
-{"elhu",      64, INSN_CLASS_XBGAS, "d,o(s)",  MATCH_ELHU, MASK_ELHU, match_opcode, 0 },
-{"elb",       64, INSN_CLASS_XBGAS, "d,o(s)",  MATCH_ELB,  MASK_ELB,  match_opcode, 0 },
-{"elbu",      64, INSN_CLASS_XBGAS, "d,o(s)",  MATCH_ELBU, MASK_ELBU, match_opcode, 0 },
-
-{"elq",       64, INSN_CLASS_XBGAS, "d,o(s)",  MATCH_ELQ,  MASK_ELQ,  match_opcode, 0 },
-{"ele",       64, INSN_CLASS_XBGAS, "e,o(s)",  MATCH_ELE,  MASK_ELE,  match_opcode, 0 },
-
-{"esd",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESD,  MASK_ESD,  match_opcode, 0 },
-{"esw",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESW,  MASK_ESW,  match_opcode, 0 },
-{"esh",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESH,  MASK_ESH,  match_opcode, 0 },
-{"esb",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESB,  MASK_ESB,  match_opcode, 0 },
-
-{"esq",       64, INSN_CLASS_XBGAS, "s,q(t)",  MATCH_ESQ,  MASK_ESQ,  match_opcode, 0 },
-{"ese",       64, INSN_CLASS_XBGAS, "f,q(t)",  MATCH_ESE,  MASK_ESE,  match_opcode, 0 },
-
-{"erld",      64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLD, MASK_ERLD, match_opcode, 0 }, 
-{"erlw",      64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLW, MASK_ERLW, match_opcode, 0 }, 
-{"erlh",      64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLH, MASK_ERLH, match_opcode, 0 }, 
-{"erlhu",     64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLHU,MASK_ERLHU,match_opcode, 0 }, 
-{"erlb",      64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLB, MASK_ERLB, match_opcode, 0 }, 
-{"erlbu",     64, INSN_CLASS_XBGAS, "d,s,g",   MATCH_ERLBU,MASK_ERLBU,match_opcode, 0 }, 
-{"erle",      64, INSN_CLASS_XBGAS, "e,s,g",   MATCH_ERLE, MASK_ERLE, match_opcode, 0 }, 
-
-{"ersd",      64, INSN_CLASS_XBGAS, "s,t,e",   MATCH_ERSD, MASK_ERSD, match_opcode, 0 }, 
-{"ersw",      64, INSN_CLASS_XBGAS, "s,t,e",   MATCH_ERSW, MASK_ERSW, match_opcode, 0 }, 
-{"ersh",      64, INSN_CLASS_XBGAS, "s,t,e",   MATCH_ERSH, MASK_ERSH, match_opcode, 0 }, 
-{"ersb",      64, INSN_CLASS_XBGAS, "s,t,e",   MATCH_ERSB, MASK_ERSB, match_opcode, 0 }, 
-{"erse",      64, INSN_CLASS_XBGAS, "f,t,e",   MATCH_ERSE, MASK_ERSE, match_opcode, 0 },
-
-{"eaddi",     64, INSN_CLASS_XBGAS, "d,f,o",  MATCH_EADDI, MASK_EADDI, match_opcode, 0 },
-{"eaddie",    64, INSN_CLASS_XBGAS, "e,s,o",  MATCH_EADDIE,MASK_EADDIE,match_opcode, 0 },
-{"eaddix",    64, INSN_CLASS_XBGAS, "e,f,o",  MATCH_EADDIX,MASK_EADDIX,match_opcode, 0 },
-
-{"ebld",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBLD,  MASK_EBLD,  match_opcode, 0 }, 
-{"eblw",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBLW,  MASK_EBLW,  match_opcode, 0 }, 
-{"eblh",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBLH,  MASK_EBLH,  match_opcode, 0 }, 
-{"eblhu",     64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBLHU, MASK_EBLHU, match_opcode, 0 }, 
-{"eblb",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBLB,  MASK_EBLB,  match_opcode, 0 }, 
-{"eblbu",     64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBLBU, MASK_EBLBU, match_opcode, 0 }, 
-
-{"ebsd",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBSD, MASK_EBSD, match_opcode, 0 }, 
-{"ebsw",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBSW, MASK_EBSW, match_opcode, 0 }, 
-{"ebsh",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBSH, MASK_EBSH, match_opcode, 0 }, 
-{"ebsb",      64, INSN_CLASS_XBGAS, "d,s,t,r",MATCH_EBSB, MASK_EBSB, match_opcode, 0 }, 
-
 /* Zicbom and Zicboz instructions.  */
 {"cbo.clean",  0, INSN_CLASS_ZICBOM, "0(s)", MATCH_CBO_CLEAN, MASK_CBO_CLEAN, match_opcode, 0 },
 {"cbo.flush",  0, INSN_CLASS_ZICBOM, "0(s)", MATCH_CBO_FLUSH, MASK_CBO_FLUSH, match_opcode, 0 },
@@ -2070,6 +2020,55 @@ const struct riscv_opcode riscv_opcodes[] =
 /* Vendor-specific (Ventana Microsystems) XVentanaCondOps instructions */
 {"vt.maskc",    0, INSN_CLASS_XVENTANACONDOPS, "d,s,t", MATCH_VT_MASKC, MASK_VT_MASKC, match_opcode, 0 },
 {"vt.maskcn",   0, INSN_CLASS_XVENTANACONDOPS, "d,s,t", MATCH_VT_MASKCN, MASK_VT_MASKCN, match_opcode, 0 },
+
+/* xBGAS instructions */
+{"eld",       64, INSN_CLASS_I, "d,o(s)",  MATCH_ELD,  MASK_ELD,  match_opcode, 0 },
+{"elw",       64, INSN_CLASS_I, "d,o(s)",  MATCH_ELW,  MASK_ELW,  match_opcode, 0 },
+{"elh",       64, INSN_CLASS_I, "d,o(s)",  MATCH_ELH,  MASK_ELH,  match_opcode, 0 },
+{"elhu",      64, INSN_CLASS_I, "d,o(s)",  MATCH_ELHU, MASK_ELHU, match_opcode, 0 },
+{"elb",       64, INSN_CLASS_I, "d,o(s)",  MATCH_ELB,  MASK_ELB,  match_opcode, 0 },
+{"elbu",      64, INSN_CLASS_I, "d,o(s)",  MATCH_ELBU, MASK_ELBU, match_opcode, 0 },
+
+{"elq",       64, INSN_CLASS_I, "d,o(s)",  MATCH_ELQ,  MASK_ELQ,  match_opcode, 0 },
+{"ele",       64, INSN_CLASS_I, "G,o(s)",  MATCH_ELE,  MASK_ELE,  match_opcode, 0 },
+
+{"esd",       64, INSN_CLASS_I, "s,q(t)",  MATCH_ESD,  MASK_ESD,  match_opcode, 0 },
+{"esw",       64, INSN_CLASS_I, "s,q(t)",  MATCH_ESW,  MASK_ESW,  match_opcode, 0 },
+{"esh",       64, INSN_CLASS_I, "s,q(t)",  MATCH_ESH,  MASK_ESH,  match_opcode, 0 },
+{"esb",       64, INSN_CLASS_I, "s,q(t)",  MATCH_ESB,  MASK_ESB,  match_opcode, 0 },
+
+{"esq",       64, INSN_CLASS_I, "s,q(t)",  MATCH_ESQ,  MASK_ESQ,  match_opcode, 0 },
+{"ese",       64, INSN_CLASS_I, "H,q(t)",  MATCH_ESE,  MASK_ESE,  match_opcode, 0 },
+
+{"erld",      64, INSN_CLASS_I, "d,s,J",   MATCH_ERLD, MASK_ERLD, match_opcode, 0 }, 
+{"erlw",      64, INSN_CLASS_I, "d,s,J",   MATCH_ERLW, MASK_ERLW, match_opcode, 0 }, 
+{"erlh",      64, INSN_CLASS_I, "d,s,J",   MATCH_ERLH, MASK_ERLH, match_opcode, 0 }, 
+{"erlhu",     64, INSN_CLASS_I, "d,s,J",   MATCH_ERLHU,MASK_ERLHU,match_opcode, 0 }, 
+{"erlb",      64, INSN_CLASS_I, "d,s,J",   MATCH_ERLB, MASK_ERLB, match_opcode, 0 }, 
+{"erlbu",     64, INSN_CLASS_I, "d,s,J",   MATCH_ERLBU,MASK_ERLBU,match_opcode, 0 }, 
+{"erle",      64, INSN_CLASS_I, "G,s,J",   MATCH_ERLE, MASK_ERLE, match_opcode, 0 }, 
+
+{"ersd",      64, INSN_CLASS_I, "s,t,G",   MATCH_ERSD, MASK_ERSD, match_opcode, 0 }, 
+{"ersw",      64, INSN_CLASS_I, "s,t,G",   MATCH_ERSW, MASK_ERSW, match_opcode, 0 }, 
+{"ersh",      64, INSN_CLASS_I, "s,t,G",   MATCH_ERSH, MASK_ERSH, match_opcode, 0 }, 
+{"ersb",      64, INSN_CLASS_I, "s,t,G",   MATCH_ERSB, MASK_ERSB, match_opcode, 0 }, 
+{"erse",      64, INSN_CLASS_I, "H,t,G",   MATCH_ERSE, MASK_ERSE, match_opcode, 0 },
+
+{"eaddi",     64, INSN_CLASS_I, "d,H,o",   MATCH_EADDI, MASK_EADDI, match_opcode, 0 },
+{"eaddie",    64, INSN_CLASS_I, "G,s,o",   MATCH_EADDIE,MASK_EADDIE,match_opcode, 0 },
+{"eaddix",    64, INSN_CLASS_I, "G,H,o",   MATCH_EADDIX,MASK_EADDIX,match_opcode, 0 },
+
+{"ebld",      64, INSN_CLASS_I, "d,s,t,r", MATCH_EBLD,  MASK_EBLD,  match_opcode, 0 }, 
+{"eblw",      64, INSN_CLASS_I, "d,s,t,r", MATCH_EBLW,  MASK_EBLW,  match_opcode, 0 }, 
+{"eblh",      64, INSN_CLASS_I, "d,s,t,r", MATCH_EBLH,  MASK_EBLH,  match_opcode, 0 }, 
+{"eblhu",     64, INSN_CLASS_I, "d,s,t,r", MATCH_EBLHU, MASK_EBLHU, match_opcode, 0 }, 
+{"eblb",      64, INSN_CLASS_I, "d,s,t,r", MATCH_EBLB,  MASK_EBLB,  match_opcode, 0 }, 
+{"eblbu",     64, INSN_CLASS_I, "d,s,t,r", MATCH_EBLBU, MASK_EBLBU, match_opcode, 0 }, 
+
+{"ebsd",      64, INSN_CLASS_I, "d,s,t,r", MATCH_EBSD, MASK_EBSD, match_opcode, 0 }, 
+{"ebsw",      64, INSN_CLASS_I, "d,s,t,r", MATCH_EBSW, MASK_EBSW, match_opcode, 0 }, 
+{"ebsh",      64, INSN_CLASS_I, "d,s,t,r", MATCH_EBSH, MASK_EBSH, match_opcode, 0 }, 
+{"ebsb",      64, INSN_CLASS_I, "d,s,t,r", MATCH_EBSB, MASK_EBSB, match_opcode, 0 }, 
 
 /* Terminate the list.  */
 {0, 0, INSN_CLASS_NONE, 0, 0, 0, 0, 0}
